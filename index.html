@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smartphneshopwebsite</title>
+    <style>
+      img {
+        width: 20%;
+        height: 1/1;
+      }
+
+      .amazon {
+        background-color: aqua;
+        right: 20px;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The best shop</h1>
+    <div>
+      <button onclick="changetext()">change text</button>
+    </div>
+
+    <div>
+      <button onclick="changebackground()">change backgroundColor</button>
+    </div>
+
+    <div>
+      <button onclick="addclass()">apply class to referral link</button>
+    </div>
+
+    <table>
+      <tr>
+        <th>Name</th>
+
+        <th>Name</th>
+
+        <th>Name</th>
+
+        <th>Name</th>
+
+        <th>Name</th>
+      </tr>
+
+      <tr>
+        <td><h2>Nokia 3310</h2></td>
+
+        <td><h2>Samsung S8</h2></td>
+
+        <td><h2>Redmy 8</h2></td>
+
+        <td><h2>Redmy 9</h2></td>
+
+        <td><h2>Iphone 8</h2></td>
+      </tr>
+      <tr id="image">
+        <td>
+          <a
+            href="https://www.bing.com/aclick?ld=e8qZ7FmBe5b6EtlLH9P9QH4zVUCUy7VWlGLZTwLlST2lL-4oymHm9F4XSkutsvkDQ0JB3d4LFMvtWtl2SlcWTQuuGEkMyuNscrQ1VzBvCtSlK8aH-QfTNWHAnWOD96JGL9bjRlJVyuZsu2D5orUGbrbFf_HlnP2u1WdJAPi0XlJfPKrXNRQgmfBmoDIXKirgUCLbd4-w&u=aHR0cHMlM2ElMmYlMmZ3d3cuZ29taWJvLml0JTJmbm9raWEtMzMxMCUyZmJsdSUzZml0cyUzZDEyNjEyOTMwMjYxMDEwMjkyMTQlMjZ1dG1fc291cmNlJTNkYmluZw&rlid=1693c851642c1b0ab33eab154c470428&ntb=1"
+            >Nokia</a
+          >
+        </td>
+
+        <td>
+          <a
+            href="https://www.bing.com/aclick?ld=e8Ih8LGrM0KpKTnmJcChnS6DVUCUwOEKkrhww5h5ifPd_DtyD7K8eQJmX3SC7bAqry0A6JxhW_dgUMrAzg3hoI3vmio4tYyEdUPTJDXlw7sC40EMi2Gfs8n7MYmTuqJxHY4YrcXR5OjeXXVgem73mElLqIukaYWdMOryG9EEQtKi-hdROSVqONw4tLwtu7uHxCy1Tx0Q&u=aHR0cHMlM2ElMmYlMmZ3d3cuY29tZXQuaXQlMmZzYW1zdW5nLWdhbGF4eS1zMjItNWctMTI4Z2ItZ3JlZW4tU0FNMDY5MzFFLXByZHR0JTNmbXNjbGtpZCUzZGFjYTY5MzQzZGRkZTFiYTAxMDYwZjAwN2Y1ZTEzOGYxJTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkU2hvcHBpbmclMjUyMFNNQVJUJTI1MjAtJTI1MjBUdXR0aSUyNTIwaSUyNTIwcHJvZG90dGklMjZ1dG1fdGVybSUzZDQ1ODUwMzIyMTQ2NjYyOTclMjZ1dG1fY29udGVudCUzZHR1dHRpJTI1MjBwcm9kb3R0aQ&rlid=aca69343ddde1ba01060f007f5e138f1&ntb=1"
+            >Samsung S8</a
+          >
+        </td>
+
+        <td>
+          <a
+            href="https://www.bing.com/aclick?ld=e84_ZMc-7XvqhJzDpOpxxtqTVUCUyIOQGaTZ1Q7hucQ1_aIbFLtRcJpXQS-kv0ZWYFgFsGKVpBjOnYImaDowFPxWWIQgdbB8rYAbJBqAR31k5iE4dKWmwg99KWoiRelmPrQ5RV468pYg3tQN3B110wF8uVOL8op9ZDInstM-kVuHHi5_pZaaqxbm-G19EtAeDZbGn43A&u=aHR0cHMlM2ElMmYlMmZ3d3cuZWJheS5pdCUyZml0bSUyZjIzNDUzOTE5MTcwNSUzZmNobiUzZHBzJTI2bm9yb3ZlciUzZDElMjZta2V2dCUzZDElMjZta3JpZCUzZDcyNC0xNTk2MDQtNjc1Mjc5LTYlMjZta2NpZCUzZDIlMjZta3NjaWQlM2QxMDElMjZpdGVtaWQlM2QyMzQ1MzkxOTE3MDUlMjZ0YXJnZXRpZCUzZDQ1ODc3MTIyNzM4NTQ0NjklMjZkZXZpY2UlM2RjJTI2bWt0eXBlJTNkJTI2Z29vZ2xlbG9jJTNkJTI2cG9pJTNkJTI2Y2FtcGFpZ25pZCUzZDQyMjMzNzYwOCUyNm1rZ3JvdXBpZCUzZDEzNDU4MDM0NTA5MzA0MTQlMjZybHNhdGFyZ2V0JTNkcGxhLTQ1ODc3MTIyNzM4NTQ0NjklMjZhYmNJZCUzZDkzMDA2ODUlMjZtZXJjaGFudGlkJTNkMTM2ODI0JTI2bXNjbGtpZCUzZDAzOGMyOGM0MGIzZDE2ZGJhNjJiNGI4MDIzMWE0NDkz&rlid=038c28c40b3d16dba62b4b80231a4493&ntb=1"
+            >Redmy 8</a
+          >
+        </td>
+
+        <td>
+          <a
+            href="https://www.bing.com/aclick?ld=e8UTvE4W81jXjxrAxHSefSgjVUCUx5tyz8DR-DXjHbXufxN--yMYQAOQZ03W6uUMFDLQDby3TrqTwHuk6QjK4WJ8zpOe6YgKX93caQTu26KLLiezza-fhl0PyG6xrhRyfU_0Hbm6CHS0IIF0BSqzfYWHLz7BwEiXGQoP9wzWg7gxzpn0MRcpra8Eq0fSV2D292uo1qpw&u=aHR0cHMlM2ElMmYlMmZkZS5zaG9wcGluZ2RlYWwub25saW5lJTJmem9vbS5waHAlM2Z1JTNkYUhSMGNITTZMeTlwZEMxbmJ5NXJaV3hyYjI5bmNtOTFjQzV1WlhRdlkzUnNMMmR2TDI5bVptVnljMlZoY21Ob1IyOF9MblJ6UFRFMk5qVXhPRGMyTVRBMk9ESW1Mbk5wWnoxamRGaDFjakkwTm1kRk5GRTJhVlpvWTNocGJHUldhbVkyY0VFdEptRm1abWxzYVdGMGFXOXVTV1E5T1RZNU56azNNVEltWTI5dFNXUTlNVEF3TlRBek1qRXpKbU52ZFc1MGNuazlhWFFtYjJabVpYSkpaRDFoTlRRek1UTXdNMlV3TURNMU16bGpNV0prT0Roak1XWmpOV1kzTWpJM055WnpaWEoyYVdObFBUTTNKblJ2YTJWdVNXUTlNekEzTm1RNU5USXROak01TUMwME5HVXlMV0prWlRjdE5HSTNPR0kyT0RFeU5XRTRKbmRoYVhROWRISjFaUSUyNmN1c3RvbTElM2QzMg&rlid=dbcd2274460814f66830413061f739b6&ntb=1"
+            >Redmy 9</a
+          >
+        </td>
+
+        <td>
+          <a
+            href="https://www.bing.com/aclick?ld=e826nqLi9n6B6k5zu7AoF3yDVUCUx6EjVau5eos6CNMM9Yi4XsuJwF84ERVbm6A4fQOfZpAZiAZVAKU1nRltZbYmwybe02D7BKkEnOCTxTYabyBMc8_83nH-u5M84Yjkngz3M2LKMF1V0uKGtdEffL2xLryMjUZ9NtRd6PfM8phf3Bk8ScvASglkVlnrnIUFW8kyL_zg&u=aHR0cHMlM2ElMmYlMmZ3d3cuYmFja21hcmtldC5pdCUyZml0LWl0JTJmcCUyZmlwaG9uZS04LTY0LWdvLW9yby1zYmxvY2NhdG8tZGEtdHV0dGktZ2xpLW9wZXJhdG9yaSUyZjI0NWExYmVlLTVjNTktNGQwMi05ZDk0LTUzM2ZmYjZjNGYwMCUzZnNob3BwaW5nJTNkZ21jJTI2bXNjbGtpZCUzZDgzYTI3ZjQyZjUwODE1OGUzMTgxMWMwNmRkNWJhYWIyJTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkU2hvcHBpbmclMjUyMC0lMjUyMEFwcGxlJTI1MjBTbWFydHBob25lcyUyNnV0bV90ZXJtJTNkNDU4MzI0NTUzNDcyNTU5OSUyNnV0bV9jb250ZW50JTNkQWxsJTI1MjBQcm9kdWN0cyUyMyUzZmwlM2QxMg&rlid=83a27f42f508158e31811c06dd5baab2&ntb=1"
+            >Iphone 8</a
+          >>
+        </td>
+      </tr>
+
+      <tr>
+        <td><button onclick="hideContainer()">Hide Container</button></td>
+
+        <td><button onclick="hideContainer2()">Hide Container</button></td>
+
+        <td><button onclick="hideContainer3()">Hide Container</button></td>
+
+        <td><button onclick="hideContainer4()">Hide Container</button></td>
+
+        <td><button onclick="hideContainer5()">Hide Container</button></td>
+      </tr>
+      <tr>
+        <td>
+          <div id="container">
+            <img
+              src="https://th.bing.com/th/id/OIP.IiLQ54cu2Bs_1c6nDJaT2QHaFp?pid=ImgDet&rs=1"
+              alt="nokia"
+            />
+          </div>
+        </td>
+
+        <td>
+          <div id="container2">
+            <img
+              src="https://th.bing.com/th/id/R.1136313254c2786342aa660b700a69b2?rik=LHL%2fIe25t1JVuQ&pid=ImgRaw&r=0"
+              alt="samsung"
+            />
+          </div>
+        </td>
+
+        <td>
+          <div id="container3">
+            <img
+              src="https://th.bing.com/th/id/R.061023776f5ce0903db501f60703baf9?rik=91ChagKHhuYZkw&pid=ImgRaw&r=0"
+              alt="redmi 8"
+            />
+          </div>
+        </td>
+
+        <td>
+          <div id="container4">
+            <img
+              src="https://th.bing.com/th/id/R.369dd1461100d4f59a0f65511e5883dc?rik=SSJ1JsoDMZBgMg&pid=ImgRaw&r=0"
+              alt="redmi 9"
+            />
+          </div>
+        </td>
+
+        <td>
+          <div id="container5">
+            <img
+              src="https://th.bing.com/th/id/R.aed84b03045ac355446b2d305307c40d?rik=c98fCmkh%2fGisVw&pid=ImgRaw&r=0"
+              alt="iphone 8"
+            />
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td><p>the stronghest mobile phone in the world</p></td>
+
+        <td><p>fast and precise perfect to capture good pictures</p></td>
+
+        <td><p>really convinient for poor people</p></td>
+
+        <td><p>really slow and low quality pictures</p></td>
+
+        <td>still one of our best product</td>
+      </tr>
+
+      <tr>
+        <td><button onclick="changecolor()">Price</button></td>
+
+        <td><button onclick="changecolor2()">Price</button></td>
+
+        <td><button onclick="changecolor3()">Price</button></td>
+
+        <td><button onclick="changecolor4()">Price</button></td>
+
+        <td><button onclick="changecolor5()">Price</button></td>
+      </tr>
+
+      <tr>
+        <td id="price1">£1250.00</td>
+
+        <td id="price2">£220.00</td>
+
+        <td id="price3">£127.00</td>
+
+        <td id="price4">£5.00</td>
+
+        <td id="price5">£549.00</td>
+      </tr>
+    </table>
+
+    <textarea rows="10" cols="30">Write your message here</textarea>
+    <imput type="submit" name="submit" value="submit"> submit</imput>
+
+    <div>
+      <button onclick="changefooteraddress()">change footeraddress</button>
+    </div>
+
+    <footer id="fot">
+      <p>The best shop</p>
+    </footer>
+
+    <script>
+      const h1 = document.querySelector("h1");
+      h1.innerText = "Modified";
+
+      const changetext = function () {
+        h1.innerText = "Modifiedd";
+      };
+      const changebackground = function () {
+        document.body.style.backgroundColor = "red";
+      };
+
+      const changefooteraddress = function () {
+        document.getElementById("fot").innerText = "The worst Shop";
+      };
+
+      const changecolor = function () {
+        document.getElementById("price1").style.color = "purple";
+      };
+      const changecolor2 = function () {
+        document.getElementById("price2").style.color = "purple";
+      };
+      const changecolor3 = function () {
+        document.getElementById("price3").style.color = "purple";
+      };
+      const changecolor4 = function () {
+        document.getElementById("price4").style.color = "purple";
+      };
+      const changecolor5 = function () {
+        document.getElementById("price5").style.color = "purple";
+      };
+
+      //const image = document.querySelector(".image");
+      //image.classList.add("amazon");
+
+      const addclass = function () {
+        image.classList.add("amazon")
+      }
+
+      const hideContainer = function () {
+        container.classList.toggle("hidden");
+      };
+
+      const hideContainer2 = function () {
+        container2.classList.toggle("hidden");
+      };
+      const hideContainer3 = function () {
+        container3.classList.toggle("hidden");
+      };
+      const hideContainer4 = function () {
+        container4.classList.toggle("hidden");
+      };
+      const hideContainer5 = function () {
+        container5.classList.toggle("hidden");
+      };
+    </script>
+  </body>
+</html>
